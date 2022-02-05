@@ -5,9 +5,11 @@ Script is used by starting the script with two parameters:
   2. Name of the resulting CSV file
   
 Examples of how to start the script:
+
   Linux:
     sudo python3 ./main.py name_of_district name_of_csv_file
   Windows:
+  
     C:\Python\Python (Python) C:\Python\Project\main.py name_of_district name_of_csv_file
     
 Output fomrat:
@@ -18,6 +20,7 @@ Output fomrat:
     Column 4: voters  == number of voters
     
 List of functions:
+
   Input:
     def user_input(argv) - Takes user parameters that are used as imput for data extraction. Output of this function are two two string variables             (name_of_the_district, file_name)
     def get_soup(url) - Creates soup from provided URL. Output of this function is soup object.
