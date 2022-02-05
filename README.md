@@ -19,8 +19,9 @@ Output fomrat:
   
     Column 1: unit_code  == code of the specific district unit
     Column 2: unit_name  == name of the specific district unit
-    Column 3: valid_votes  == number of valid votes
-    Column 4: voters  == number of voters
+    Column 3: submitted_envelopes == Number of submitted envelopes
+    Column 4: valid_votes  == number of valid votes
+    Column 5: voters  == number of voters
     
 List of functions:
 
@@ -29,10 +30,12 @@ List of functions:
     def user_input(argv) - Takes user parameters that are used as imput for data extraction. Output of this function are two two string variables             (name_of_the_district, file_name)
     def get_soup(url) - Creates soup from provided URL. Output of this function is soup object.
     def process_main_url(url) - Process main url so it can be used with other related urls. Output is string containing processed part of the main url that can be used for further adresses.
+    get_district_url(url, name_of_the_district) - Process url of given district based on provided district name and returns url string of such district detail.
 
   Data Extraction:
     
-    
+    fix_numbers(string) - Function that takes incorrectly formated space in number and fixes it. When numbers data are extracted they might have incorrect character formating. This is fixed by  this function which returns fixed number as a string.
+    read_district_unit_data(url, district_unit_url) - 
   
   Writing into CSV:
   
