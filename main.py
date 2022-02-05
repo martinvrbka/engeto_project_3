@@ -14,7 +14,7 @@ def user_input(argv):
         except ValueError as e:
             sys.exit(f"Wrong type of arguments, {e} error occured")
     else:
-        sys.exit("Wrong number of arguments")
+        sys.exit(f"Wrong number of arguments, {e} error occured")
 
     return name_of_the_district, file_name
 
