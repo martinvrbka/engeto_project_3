@@ -73,6 +73,7 @@ def read_all_district_data(url, name_of_the_district):
             try:
                 unit_data = {"unit_code": table_cell.find_all("td")[0].text,
                              "unit_name": table_cell.find_all("td")[1].text,
+                             "voters": 0,
                              "submitted_envelopes": 0,
                              "valid_votes": 0}
 
