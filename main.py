@@ -9,14 +9,14 @@ def user_input(argv):
 
         try:
             name_of_the_district = str(argv[1])
-            file_name = str(argv[2])
+            csv_file_name = str(argv[2])
 
         except ValueError as e:
-            sys.exit(f"Wrong type of arguments, {e} error occured")
+            sys.exit(f"Wrong type of arguments, {e} error occured.")
     else:
-        sys.exit(f"Wrong number of arguments, {e} error occured")
+        sys.exit(f"Wrong number of arguments.")
 
-    return name_of_the_district, file_name
+    return name_of_the_district, csv_file_name
 
 
 def get_soup(url):
@@ -85,8 +85,8 @@ def read_all_district_data(url, name_of_the_district):
     return unit_list
 
 
-def write_csv(file_name, extracted_data):
-    with open(file_name + ".csv", "w", newline="") as csv_file:
+def write_csv(csv_file_name, extracted_data):
+    with open(csv_file_name + ".csv", "w", newline="") as csv_file:
 
         writer = csv.DictWriter(csv_file, fieldnames=extracted_data[0].keys())
 
@@ -100,6 +100,6 @@ def write_csv(file_name, extracted_data):
 if __name__ == "__main__":
 
     url = "https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ"
-    name_of_the_district, file_name = user_input(sys.argv)
+    name_of_the_district, csv_file_name = user_input(sys.argv)
     extracted_data = read_all_district_data(url, name_of_the_district)
-    write_csv(file_name, extracted_data)
+    write_csv(csv_file_name, extracted_data)
