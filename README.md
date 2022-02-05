@@ -14,7 +14,9 @@ Examples of how to start the script:
     C:\Python\Python (Python) C:\Python\Project\main.py name_of_district name_of_csv_file
     
 Output fomrat:
+
   Output of the script is csv file that is formated as follow:
+  
     Column 1: unit_code  == code of the specific district unit
     Column 2: unit_name  == name of the specific district unit
     Column 3: valid_votes  == number of valid votes
