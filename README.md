@@ -40,4 +40,4 @@ List of functions:
   
   Writing into CSV:
   
-  
+  def write_csv(file_name, extracted_data) - Takes extracted data and name of the file. Returns table with the values in a file according the provided name as a argument.
