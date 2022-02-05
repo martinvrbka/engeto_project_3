@@ -11,7 +11,7 @@ Examples of how to start the script:
     sudo python3 ./main.py name_of_district name_of_csv_file
   Windows:
   
-    C:\Python\Python (Python) C:\Python\Project\main.py name_of_district name_of_csv_file
+    C:\Python\Python C:\Python\Project\main.py name_of_district name_of_csv_file
     
 Output fomrat:
 
