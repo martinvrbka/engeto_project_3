@@ -98,6 +98,7 @@ def write_csv(file_name, extracted_data):
 
 
 if __name__ == "__main__":
+
     url = "https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ"
     name_of_the_district, file_name = user_input(sys.argv)
     extracted_data = read_all_district_data(url, name_of_the_district)
