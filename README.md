@@ -30,7 +30,7 @@ List of functions:
     def user_input(argv) - Takes user parameters that are used as imput for data extraction. Output of this function are two two string variables             (name_of_the_district, file_name)
     def get_soup(url) - Creates soup from provided URL. Output of this function is soup object.
     def process_main_url(url) - Process main url so it can be used with other related urls. Output is string containing processed part of the main url that can be used for further adresses.
-    get_district_url(url, name_of_the_district) - Process url of given district based on provided district name and returns url string of such district detail.
+    def get_district_url(url, name_of_the_district) - Process url of given district based on provided district name and returns url string of such district detail.
 
   Data Extraction:
     
