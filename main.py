@@ -26,7 +26,8 @@ def get_soup(url):
         return soup
     except requests.exceptions.ConnectionError as e:
         sys.exit(f"Problem with connection: {e}")
-
+    except requests.exceptions.InvalidURL as e:
+        sys.exit(f"Problem with URL: {e}")
 
 def process_main_url(url):
     main_url = "/".join(url.split("/")[0:5])
