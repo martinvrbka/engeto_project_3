@@ -7,6 +7,7 @@ Script is used by starting the script with two parameters:
 Examples of how to start the script:
 
   Linux:
+  
     sudo python3 ./main.py name_of_district name_of_csv_file
   Windows:
   
