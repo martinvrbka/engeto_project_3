@@ -20,9 +20,12 @@ def user_input(argv):
 
 
 def get_soup(url):
-    soup = requests.get(url)
-    soup = BeautifulSoup(soup.text, "html.parser")
-    return soup
+    try:
+        soup = requests.get(url)
+        soup = BeautifulSoup(soup.text, "html.parser")
+        return soup
+    except requests.exceptions.ConnectionError as e:
+        sys.exit(f"Problem with connection: {e}")
 
 
 def process_main_url(url):
