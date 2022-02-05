@@ -4,7 +4,7 @@ Script is used by starting the script with two parameters:
   1. Name of the district
   2. Name of the resulting CSV file
   
-Examples how to start the script:
+Examples of how to start the script:
   Linux:
     sudo python3 ./main.py name_of_district name_of_csv_file
   Windows:
@@ -18,7 +18,14 @@ Output fomrat:
     Column 4: voters  == number of voters
     
 List of functions:
-  Data Extractio:
+  Input:
+    def user_input(argv) - Takes user parameters that are used as imput for data extraction. Output of this function are two two string variables             (name_of_the_district, file_name)
+    def get_soup(url) - Creates soup from provided URL. Output of this function is soup object.
+    def process_main_url(url) - Process main url so it can be used with other related urls. Output is string containing processed part of the main url that can be used for further adresses.
+
+  Data Extraction:
+    
+    
   
   Writing into CSV:
   
