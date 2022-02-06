@@ -62,9 +62,9 @@ def read_district_unit_data(url, district_unit_url):
     soup = get_soup(f"{process_main_url(url)}/{district_unit_url}")
     unit_data = dict()
 
-    unit_data["voters"] = fix_space(soup.find("td", {"headers": "sa2"}).text)
-    unit_data["submitted_envelopes"] = fix_space(soup.find("td", {"headers": "sa3"}).text)
-    unit_data["valid_votes"] = fix_space(soup.find("td", {"headers": "sa6"}).text)
+    unit_data["Voters"] = fix_space(soup.find("td", {"headers": "sa2"}).text)
+    unit_data["Submitted envelopes"] = fix_space(soup.find("td", {"headers": "sa3"}).text)
+    unit_data["Valid votes"] = fix_space(soup.find("td", {"headers": "sa6"}).text)
 
     return unit_data
 
@@ -98,8 +98,8 @@ def read_all_district_data(url, name_of_the_district):
 
         for table_cell in table_rows:
             try:
-                unit_data = {"unit_code": table_cell.find_all("td")[0].text,
-                             "unit_name": table_cell.find_all("td")[1].text,
+                unit_data = {"Unit code": table_cell.find_all("td")[0].text,
+                             "Unit name": table_cell.find_all("td")[1].text,
                              "voters": 0,
                              "submitted_envelopes": 0,
                              "valid_votes": 0}
