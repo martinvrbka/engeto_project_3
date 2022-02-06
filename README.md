@@ -1,5 +1,7 @@
 File works as a vote results scfaper. It takes district name and returns result for this udistrict. Results are from year 2017.
 
+Libaries used are saved in requrements.txt and can be installed by using pip install -r requirements.txt .
+
 Script is used by starting the script with two parameters:
   1. Name of the district
   2. Name of the resulting CSV file
