@@ -38,7 +38,7 @@ List of functions:
 
   Data Extraction:
     
-    def fix_numbers(string) - Function that takes incorrectly formated space in number and fixes it. When numbers data are extracted they might have incorrect character formating. This is fixed by  this function which returns fixed number as a string.
+    def fix_space(string) - Function that takes incorrectly formated space in number and fixes it. When numbers data are extracted they might have incorrect character formating. This is fixed by  this function which returns fixed number as a string.
     def read_district_unit_data(url, district_unit_url) - Extracts data from individual district units. Returns Voters, Valid votes and Submitted envelopes.
     def read_all_district_data(url, name_of_the_district - Extracts Voters, Valid votes and Submitted envelopes using read_district_unit_data function. Also extracts Unit code and Unit name of the district unit. All of this is returned as a List containing dictionaries contaning all of this info.
   
