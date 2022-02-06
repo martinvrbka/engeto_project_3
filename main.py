@@ -11,6 +11,9 @@ def user_input(argv):
             name_of_the_district = str(argv[1])
             csv_file_name = str(argv[2])
 
+            if name_of_the_district == "Zahraničí":
+                sys.exit("Please select only districts in Czech Republic.")
+
         except ValueError as e:
             sys.exit(f"Wrong type of arguments, {e} error occured.")
     else:
