@@ -99,10 +99,7 @@ def read_all_district_data(url, name_of_the_district):
         for table_cell in table_rows:
             try:
                 unit_data = {"Unit code": table_cell.find_all("td")[0].text,
-                             "Unit name": table_cell.find_all("td")[1].text,
-                             "voters": 0,
-                             "submitted_envelopes": 0,
-                             "valid_votes": 0}
+                             "Unit name": table_cell.find_all("td")[1].text,}
 
                 unit_data.update(read_district_unit_data(url, table_cell.find_all('td')[0].find('a')['href']))
                 unit_data.update(read_district_unit_parties_data(url, table_cell.find_all('td')[0].find('a')['href']))
