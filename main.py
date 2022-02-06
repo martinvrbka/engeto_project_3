@@ -32,6 +32,7 @@ def get_soup(url):
     except requests.exceptions.InvalidURL as e:
         sys.exit(f"Problem with URL: {e}")
 
+
 def process_main_url(url):
     main_url = "/".join(url.split("/")[0:5])
     return main_url
@@ -50,7 +51,7 @@ def get_district_url(url, name_of_the_district):
         sys.exit(f"There are no results for district named {name_of_the_district}.")
 
 
-def fix_numbers(string):
+def fix_space(string):
     try:
         return int(string.replace("\xa0", ""))
     except ValueError as e:
@@ -61,10 +62,29 @@ def read_district_unit_data(url, district_unit_url):
     soup = get_soup(f"{process_main_url(url)}/{district_unit_url}")
     unit_data = dict()
 
-    unit_data["voters"] = fix_numbers(soup.find("td", {"headers": "sa2"}).text)
-    unit_data["submitted_envelopes"] = fix_numbers(soup.find("td", {"headers": "sa3"}).text)
-    unit_data["valid_votes"] = fix_numbers(soup.find("td", {"headers": "sa6"}).text)
+    unit_data["voters"] = fix_space(soup.find("td", {"headers": "sa2"}).text)
+    unit_data["submitted_envelopes"] = fix_space(soup.find("td", {"headers": "sa3"}).text)
+    unit_data["valid_votes"] = fix_space(soup.find("td", {"headers": "sa6"}).text)
 
+    return unit_data
+
+
+def read_district_unit_parties_data(url, district_unit_url):
+    soup = get_soup(f"{process_main_url(url)}/{district_unit_url}")
+    unit_data = dict()
+
+    tables = soup.find_all("table", {"class": "table"})
+
+    for table in tables:
+        table_rows = table.find_all("tr")
+        for table_cell in table_rows:
+            try:
+                unit_data[table_cell.find("td", {"class": "overflow_name"}).text] = \
+                    fix_space(table_cell.find_all("td", {"class": "cislo"})[1].text)
+            except AttributeError:
+                continue
+            except IndexError:
+                continue
     return unit_data
 
 
@@ -85,6 +105,7 @@ def read_all_district_data(url, name_of_the_district):
                              "valid_votes": 0}
 
                 unit_data.update(read_district_unit_data(url, table_cell.find_all('td')[0].find('a')['href']))
+                unit_data.update(read_district_unit_parties_data(url, table_cell.find_all('td')[0].find('a')['href']))
                 unit_list.append(unit_data)
 
             except TypeError:
