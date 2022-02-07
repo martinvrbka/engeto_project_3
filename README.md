@@ -21,11 +21,12 @@ Output fomrat:
 
   Output of the script is csv file that is formated as follow:
   
-    Column 1: unit_code  == code of the specific district unit
-    Column 2: unit_name  == name of the specific district unit
-    Column 3: submitted_envelopes == Number of submitted envelopes
-    Column 4: valid_votes  == number of valid votes
-    Column 5: voters  == number of voters
+    Column 1: Unit code  == code of the specific district unit
+    Column 2: Unit name  == name of the specific district unit
+    Column 3: Submitt edenvelopes == Number of submitted envelopes
+    Column 4: Valid votes  == number of valid votes
+    Column 5: Voters  == number of voters
+    Column 6 - Last Column == Individual parties and number of voters (Specific number of voters not percentage)
     
 List of functions:
 
