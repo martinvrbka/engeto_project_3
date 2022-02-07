@@ -1,4 +1,4 @@
-File works as a vote results scfaper. It takes district name and returns result for this udistrict. Results are from year 2017.
+File works as a vote results scraper. It takes district name and returns it's election results. TMain URL used takes results from 2017 elections.
 
 Libaries used are saved in requrements.txt and can be installed by using: 
 
