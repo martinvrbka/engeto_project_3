@@ -81,10 +81,9 @@ def read_district_unit_parties_data(url, district_unit_url):
             try:
                 unit_data[table_cell.find("td", {"class": "overflow_name"}).text] = \
                     fix_space(table_cell.find_all("td", {"class": "cislo"})[1].text)
-            except AttributeError:
+            except (AttributeError, IndexError):
                 continue
-            except IndexError:
-                continue
+
     return unit_data
 
 
