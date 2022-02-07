@@ -19,7 +19,7 @@ Examples of how to start the script:
     
 Output fomrat:
 
-  Output of the script is csv file that is formated as follow:
+  Output of the script is csv file that is formated in a following way:
   
     Column 1: Unit code  == code of the specific district unit
     Column 2: Unit name  == name of the specific district unit
