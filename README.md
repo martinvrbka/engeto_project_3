@@ -1,4 +1,4 @@
-File works as a vote results scfaper. It takes district name and returns result for this udistrict. Results are from year 2017.
+File works as a election vote results scraper. It takes district name and returns it's election results. Main URL used takes results from 2017 elections. 
 
 Libaries used are saved in requrements.txt and can be installed by using: 
 
@@ -12,22 +12,30 @@ Examples of how to start the script:
 
   Linux:
   
-    sudo python3 ./main.py name_of_district name_of_csv_file
+    python3 main.py name_of_district name_of_csv_file
   Windows:
   
     C:\Python\Python C:\Python\Project\main.py name_of_district name_of_csv_file
     
+  Example:
+  
+    python3 main.py Blansko blansko
+
+    
 Output fomrat:
 
-  Output of the script is csv file that is formated as follow:
+  Output of the script is csv file that is formated in a following way:
   
-    Column 1: unit_code  == code of the specific district unit
-    Column 2: unit_name  == name of the specific district unit
-    Column 3: submitted_envelopes == Number of submitted envelopes
-    Column 4: valid_votes  == number of valid votes
-    Column 5: voters  == number of voters
+    Column 1: Unit code  == code of the specific district unit
+    Column 2: Unit name  == name of the specific district unit
+    Column 3: Submitt edenvelopes == Number of submitted envelopes
+    Column 4: Valid votes  == number of valid votes
+    Column 5: Voters  == number of voters
+    Column 6 - Last Column: Parties == Individual parties and number of voters (Specific number of voters not percentage)
     
-List of functions:
+List of functions used:
+
+Note: Some functions are divided as a attempt to decrease complexity of individual functions. Example of this would be read_district_unit_data and read_district_unit_parties_data. Both these functions take infromation from inside of specific district unit however I split these as they are using two different tables and to avoid too complex function.
 
   Input:
   
@@ -46,3 +54,5 @@ List of functions:
   Writing into CSV:
   
     def write_csv(file_name, extracted_data) - Takes extracted data and name of the file. Returns table with the values in a file according the provided name as a argument.
+    
+ PS: I tested URL 2021 without any issues. Therefore nice addition might be using third argument which would take also a year of the election. This however was not part of the assignement and therefore not included or tested further. I might do so after evaluation.
