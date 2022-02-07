@@ -35,6 +35,8 @@ Output fomrat:
     
 List of functions used:
 
+Note: Some functions are divided as a attempt to decrease complexity of individual functions. Example of this would be read_district_unit_data and read_district_unit_parties_data. Both these functions take infromation from inside of specific district unit however I split these as they are using two different tables and to avoid too complex function.
+
   Input:
   
     def user_input(argv) - Takes user parameters that are used as imput for data extraction. Output of this function are two two string variables             (name_of_the_district, file_name)
