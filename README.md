@@ -26,7 +26,7 @@ Output fomrat:
     Column 3: Submitt edenvelopes == Number of submitted envelopes
     Column 4: Valid votes  == number of valid votes
     Column 5: Voters  == number of voters
-    Column 6 - Last Column == Individual parties and number of voters (Specific number of voters not percentage)
+    Column 6 - Last Column: Parties == Individual parties and number of voters (Specific number of voters not percentage)
     
 List of functions:
 
