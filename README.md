@@ -1,4 +1,4 @@
-File works as a vote results scraper. It takes district name and returns it's election results. TMain URL used takes results from 2017 elections.
+File works as a vote results scraper. It takes district name and returns it's election results. Main URL used takes results from 2017 elections. 
 
 Libaries used are saved in requrements.txt and can be installed by using: 
 
@@ -52,3 +52,5 @@ List of functions:
   Writing into CSV:
   
     def write_csv(file_name, extracted_data) - Takes extracted data and name of the file. Returns table with the values in a file according the provided name as a argument.
+    
+ PS: I tested URL 2021 without any issues. Therefore nice addition might be using third argument which would take also a year of the election. This however was not part of the assignement and therefore not included or tested further. I might do so after evaluation.
