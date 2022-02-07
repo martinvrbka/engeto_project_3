@@ -12,10 +12,15 @@ Examples of how to start the script:
 
   Linux:
   
-    sudo python3 ./main.py name_of_district name_of_csv_file
+    python3 ./main.py name_of_district name_of_csv_file
   Windows:
   
     C:\Python\Python C:\Python\Project\main.py name_of_district name_of_csv_file
+    
+  Example:
+  
+    python3 ./main.py Blansko blansko
+
     
 Output fomrat:
 
