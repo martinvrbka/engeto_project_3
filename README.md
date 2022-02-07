@@ -1,4 +1,4 @@
-File works as a vote results scraper. It takes district name and returns it's election results. Main URL used takes results from 2017 elections. 
+File works as a election vote results scraper. It takes district name and returns it's election results. Main URL used takes results from 2017 elections. 
 
 Libaries used are saved in requrements.txt and can be installed by using: 
 
@@ -12,14 +12,14 @@ Examples of how to start the script:
 
   Linux:
   
-    python3 ./main.py name_of_district name_of_csv_file
+    python3 main.py name_of_district name_of_csv_file
   Windows:
   
     C:\Python\Python C:\Python\Project\main.py name_of_district name_of_csv_file
     
   Example:
   
-    python3 ./main.py Blansko blansko
+    python3 main.py Blansko blansko
 
     
 Output fomrat:
@@ -33,7 +33,7 @@ Output fomrat:
     Column 5: Voters  == number of voters
     Column 6 - Last Column: Parties == Individual parties and number of voters (Specific number of voters not percentage)
     
-List of functions:
+List of functions used:
 
   Input:
   
